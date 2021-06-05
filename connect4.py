@@ -45,14 +45,18 @@ def winning_move(board, piece):
     # check neg slope
     for col in range(COLOUMN-3):
         for row in range(ROW-3):
-            if (board[row, col] == piece and board[row+1, col+1] == piece
-               and board[row+2, col+2] == piece and board[row+3, col+3] == piece):
+            if (board[row, col] == piece
+                    and board[row+1, col+1] == piece
+                    and board[row+2, col+2] == piece
+                    and board[row+3, col+3] == piece):
                 return True
     # check pos slope
     for col in range(COLOUMN-3):
         for row in range(ROW-1, ROW-4, -1):
-            if (board[row, col] == piece and board[row-1, col+1] == piece
-               and board[row-2, col+2] == piece and board[row-3, col+3] == piece):
+            if (board[row, col] == piece
+                    and board[row-1, col+1] == piece
+                    and board[row-2, col+2] == piece
+                    and board[row-3, col+3] == piece):
                 return True
     return False
 
